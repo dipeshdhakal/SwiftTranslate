@@ -11,8 +11,11 @@ public protocol TranslationProvider {
 @Generable
 public struct TranslationResult {
     public let id: String
+    @Guide(description: "The translated text.")
     public let translatedText: String
+    @Guide(description: "The detected or provided source language in ISO 639-1 code (e.g., 'en' for English).")
     public let sourceLanguage: String
+    @Guide(description: "The target language in ISO 639-1 code (e.g., 'es' for Spanish).")
     public let targetLanguage: String
     
     public init(translatedText: String, sourceLanguage: String, targetLanguage: String, id: String = UUID().uuidString) {
