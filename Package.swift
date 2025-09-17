@@ -7,8 +7,8 @@ let package = Package(
 
     name: "SwiftTranslate",
     platforms: [
-        .macOS(.v26),
-        .iOS(.v26)
+        .macOS(.v12),
+        .iOS(.v16)
     ],
     products: [
         .library(
