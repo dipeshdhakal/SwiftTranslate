@@ -1,3 +1,11 @@
+**Important note**: Although this library has many language support, while testing I found that Apple's LanguageModel only supports [few languages](https://www.apple.com/au/newsroom/2025/02/apple-intelligence-expands-to-more-languages-and-regions-in-april/) and threw following error for others. I suggest you test with your targeted language and verify if it is supported. See IntegrationTests.swift where I have tested for spanish. As Apple adds more language support in future, this library should work without needing any updates.
+```swift
+GenerationError
+  unsupportedLanguageOrLocale : Context
+    - debugDescription : "Unsupported language."
+    - underlyingErrors : 0 elements
+```
+
 # SwiftTranslate
 
 A Swift package that provides text translation capabilities using Apple's FoundationModels framework on supported devices, with graceful fallback for older iOS/macOS versions.
@@ -8,7 +16,6 @@ A Swift package that provides text translation capabilities using Apple's Founda
 - 🔄 **Automatic fallback**: Uses FoundationModels when available, allows custom implementations otherwise
 - 🏗️ **Dependency injection**: Clean architecture with protocol-based translation providers
 - 🧪 **Comprehensive testing**: Unit tests with mocking support
-- 🌍 **190+ languages**: Extensive language support
 - **On-device translation**: Uses Apple's FoundationModels for privacy-focused, offline translation when available
 - **Async/await support**: Modern Swift concurrency for seamless integration
 - **Batch translation**: Translate multiple texts efficiently
@@ -28,7 +35,7 @@ Add SwiftTranslate as a dependency to your `Package.swift` file:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/dipeshdhakal/SwiftTranslate.git", from: "1.0.0")
+    .package(url: "https://github.com/dipeshdhakal/SwiftTranslate.git", from: "1.2.0")
 ]
 ```
 
